@@ -1,0 +1,106 @@
+/* LC WORLD MUSIC - Estilos Globales */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000;
+  color: #e5e5e5;
+}
+
+/* Animaciones del ecualizador para hover en BeatList */
+@keyframes eqPulse1 {
+  0%, 100% { height: 25%; }
+  50% { height: 95%; }
+}
+
+@keyframes eqPulse2 {
+  0%, 100% { height: 85%; }
+  50% { height: 30%; }
+}
+
+@keyframes eqPulse3 {
+  0%, 100% { height: 35%; }
+  50% { height: 100%; }
+}
+
+@keyframes eqPulse4 {
+  0%, 100% { height: 90%; }
+  50% { height: 40%; }
+}
+
+@keyframes eqPulse5 {
+  0%, 100% { height: 30%; }
+  50% { height: 80%; }
+}
+
+.animate-eq-1 {
+  animation: eqPulse1 0.65s ease-in-out infinite alternate;
+}
+
+.animate-eq-2 {
+  animation: eqPulse2 0.5s ease-in-out infinite alternate;
+}
+
+.animate-eq-3 {
+  animation: eqPulse3 0.75s ease-in-out infinite alternate;
+}
+
+.animate-eq-4 {
+  animation: eqPulse4 0.55s ease-in-out infinite alternate;
+}
+
+.animate-eq-5 {
+  animation: eqPulse5 0.7s ease-in-out infinite alternate;
+}
+
+/* Animaciones cinematográficas para el fondo de las tarjetas de beats */
+@keyframes cinematicPanZoom {
+  0% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1.04) translate(1.5%, 0.5%);
+  }
+}
+
+.animate-cinematic-pan {
+  animation: cinematicPanZoom 16s ease-in-out infinite alternate;
+}
+
+@keyframes bpmBreath {
+  0%, 100% {
+    transform: scale(1.02);
+    filter: brightness(1.15) contrast(1.15) saturate(1.15);
+  }
+  50% {
+    transform: scale(1.08);
+    filter: brightness(1.35) contrast(1.25) saturate(1.25);
+  }
+}
+
+.animate-bpm-pulse {
+  animation: bpmBreath 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes studioLightSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-light-sweep {
+  animation: studioLightSweep 10s ease-in-out infinite;
+}
+

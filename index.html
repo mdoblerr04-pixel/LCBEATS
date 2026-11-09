@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LC MUSIC WORLD | Beat Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&family=Rubik+Dirt&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cds/city@1.1.0/css/bundles/default.min.css">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Oswald', sans-serif; }
+      .font-rubik { font-family: 'Rubik Dirt', system-ui; }
+      .font-teko { font-family: 'Teko', sans-serif; }
+      .font-staatliches { font-family: 'Staatliches', cursive, sans-serif; }
+      .font-clarity { font-family: 'Clarity City', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      
+      /* Custom scrollbar for dark theme */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #050505; }
+      ::-webkit-scrollbar-thumb { background: #333; }
+      ::-webkit-scrollbar-thumb:hover { background: #dc2626; }
+      
+      .visualizer-bar {
+        animation: bounce 1s infinite ease-in-out;
+      }
+      @keyframes bounce {
+        0%, 100% { height: 20%; }
+        50% { height: 100%; }
+      }
+      
+      @keyframes eqPulse1 {
+        0%, 100% { height: 25%; }
+        50% { height: 95%; }
+      }
+      @keyframes eqPulse2 {
+        0%, 100% { height: 85%; }
+        50% { height: 30%; }
+      }
+      @keyframes eqPulse3 {
+        0%, 100% { height: 35%; }
+        50% { height: 100%; }
+      }
+      @keyframes eqPulse4 {
+        0%, 100% { height: 90%; }
+        50% { height: 40%; }
+      }
+      @keyframes eqPulse5 {
+        0%, 100% { height: 30%; }
+        50% { height: 80%; }
+      }
+      .animate-eq-1 { animation: eqPulse1 0.65s ease-in-out infinite alternate; }
+      .animate-eq-2 { animation: eqPulse2 0.5s ease-in-out infinite alternate; }
+      .animate-eq-3 { animation: eqPulse3 0.75s ease-in-out infinite alternate; }
+      .animate-eq-4 { animation: eqPulse4 0.55s ease-in-out infinite alternate; }
+      .animate-eq-5 { animation: eqPulse5 0.7s ease-in-out infinite alternate; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@stripe/stripe-js": "https://esm.sh/@stripe/stripe-js@2.4.0",
+    "@stripe/react-stripe-js": "https://esm.sh/@stripe/react-stripe-js@2.4.0?external=react,react-dom,@stripe/stripe-js",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.43.4",
+    "three": "https://esm.sh/three@0.165.0",
+    "three/": "https://esm.sh/three@0.165.0/",
+    "three/addons/": "https://esm.sh/three@0.165.0/examples/jsm/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-neutral-950 text-neutral-200 antialiased selection:bg-red-600 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
